@@ -12,7 +12,7 @@ import { Footer } from './components/Footer';
 import { LinkModal } from './components/LinkModal';
 
 const DEFAULT_FIGMA_URL = 'https://www.figma.com/proto/8xurgCtCj8ft46yGnAIMkU/QuickAttend?node-id=3-365&p=f&t=SxWYwvveouxwpJ6b-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A365&show-proto-sidebar=1';
-const DEFAULT_BEHANCE_URL = 'https://www.behance.net/portfolio/editor?project_id=259023993';
+const DEFAULT_BEHANCE_URL = 'https://www.behance.net/gallery/259027739/QuickAttend-Dim-danh-mt-chm';
 const DEFAULT_WIKI_URL = 'https://github.com/QuickAttend-Team/QuickAttend/wiki';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
 
   const [behanceUrl, setBehanceUrl] = useState<string>(() => {
     const saved = localStorage.getItem('quickattend_behance_url');
-    if (!saved || saved.includes('QuickAttend-Smart-Attendance-System')) return DEFAULT_BEHANCE_URL;
+    if (!saved || saved.includes('QuickAttend-Smart-Attendance-System') || saved.includes('portfolio/editor')) return DEFAULT_BEHANCE_URL;
     return saved;
   });
 

@@ -20,7 +20,7 @@ export const TestimonialSection: React.FC = () => {
             <div className="testimonial__avatar_01">QT</div>
             <div className="testimonial__author_info_01">
               <div className="testimonial__author_name_01">
-                PGS. TS. Quản Thành Thoooo
+                PGS. TS. Quản Thành Thơ
               </div>
               <div className="testimonial__author_title_01">
                 Khoa Khoa Học Máy Tính - Trường Đại học Bách Khoa - ĐHQG-HCM
