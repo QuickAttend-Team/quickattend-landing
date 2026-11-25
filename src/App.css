@@ -51,6 +51,18 @@
   text-decoration: none;
 }
 
+.navbar__logo_img_01 {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.navbar__brand_01:hover .navbar__logo_img_01 {
+  opacity: 0.88;
+}
+
 .navbar__logo_icon_01 {
   width: 32px;
   height: 32px;
@@ -2089,6 +2101,13 @@
   align-items: center;
   gap: 0.65rem;
   margin-bottom: 1rem;
+}
+
+.footer__logo_img_01 {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .footer__brand_icon_01 {

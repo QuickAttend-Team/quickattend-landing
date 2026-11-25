@@ -1,5 +1,6 @@
 import React from 'react';
-import { Sparkles, ExternalLink, Settings2 } from 'lucide-react';
+import { ExternalLink, Settings2 } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 interface NavbarProps {
   onOpenLinkModal: () => void;
@@ -17,20 +18,18 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="navbar__header_01" data-component="Navbar">
       <div className="navbar__inner_01">
-        {/* Brand: quickattend. matching Stitch Image 2 */}
+        {/* Brand: quickattend. official logo image */}
         <a href="#" className="navbar__brand_01" aria-label="quickattend.">
-          <div className="navbar__logo_icon_01">
-            <span className="navbar__logo_dot_01"></span>
-            <Sparkles size={16} />
-          </div>
-          <span className="navbar__brand_title_01">
-            quickattend<span className="navbar__brand_dot_01">.</span>
-          </span>
+          <img
+            src={logoImg}
+            alt="quickattend."
+            className="navbar__logo_img_01"
+          />
         </a>
 
         {/* Navigation Links: Flat single-line layout without gray container */}
         <nav className="navbar__nav_01" aria-label="Điều hướng chính">
-          <a href="#giai-phap" className="navbar__nav_link_01">Tính năng</a>
+          <a href="#tinh-nang" className="navbar__nav_link_01">Tính năng</a>
           <a href="#giai-phap" className="navbar__nav_link_01">Giải pháp</a>
           <a href="#quy-trinh" className="navbar__nav_link_01">Quy trình</a>
           <a href="#user-stories" className="navbar__nav_link_01">8 User Stories</a>

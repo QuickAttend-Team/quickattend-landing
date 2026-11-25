@@ -40,7 +40,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <section className="hero__section_01" data-component="HeroSection">
+    <section id="tinh-nang" className="hero__section_01" data-component="HeroSection">
       {/* Ambient background glows */}
       <div className="hero__ambient_glow_01" aria-hidden="true"></div>
       <div className="hero__ambient_glow_02" aria-hidden="true"></div>

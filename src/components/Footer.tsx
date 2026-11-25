@@ -1,6 +1,7 @@
 import React from "react";
-import { Sparkles, Users, BookOpen } from "lucide-react";
+import { Users, BookOpen } from "lucide-react";
 import type { TeamMember } from "../types";
+import logoImg from "../assets/logo.png";
 
 function GithubIcon({ size = 16 }: { size?: number }) {
   return (
@@ -57,10 +58,11 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="footer__top_01">
           <div className="footer__brand_col_01">
             <div className="footer__brand_header_01">
-              <div className="footer__brand_icon_01">
-                <Sparkles size={16} />
-              </div>
-              <span className="footer__brand_title_01">QuickAttend</span>
+              <img
+                src={logoImg}
+                alt="quickattend."
+                className="footer__logo_img_01"
+              />
             </div>
             <p className="footer__brand_desc_01">
               Hệ thống điểm danh di động 1-chạm kết hợp Geofencing GPS,
