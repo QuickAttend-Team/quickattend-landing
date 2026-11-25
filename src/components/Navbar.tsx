@@ -1,16 +1,14 @@
 import React from 'react';
-import { ExternalLink, Settings2 } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 
 interface NavbarProps {
-  onOpenLinkModal: () => void;
   figmaUrl: string;
   behanceUrl: string;
   wikiUrl?: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  onOpenLinkModal,
   figmaUrl,
   behanceUrl,
   wikiUrl = 'https://github.com/QuickAttend-Team/QuickAttend/wiki',
@@ -36,7 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <a href="#doi-ngu" className="navbar__nav_link_01">Đội ngũ</a>
         </nav>
 
-        {/* Actions & CTAs: Behance + GitHub Wiki + Figma black pill + Settings circle button */}
+        {/* Actions & CTAs: Behance + GitHub Wiki + Figma black pill */}
         <div className="navbar__actions_01">
           <a
             href={wikiUrl}
@@ -68,16 +66,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>Figma Prototype</span>
             <ExternalLink size={14} />
           </a>
-
-          <button
-            type="button"
-            onClick={onOpenLinkModal}
-            className="navbar__button_avatar_01"
-            title="Cài đặt link nộp bài"
-            aria-label="Cài đặt link nộp bài"
-          >
-            <Settings2 size={16} />
-          </button>
         </div>
       </div>
     </header>

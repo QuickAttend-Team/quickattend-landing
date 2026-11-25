@@ -9,31 +9,28 @@ import { UserStoriesSection } from './components/UserStoriesSection';
 import { TestimonialSection } from './components/TestimonialSection';
 import { CtaBannerSection } from './components/CtaBannerSection';
 import { Footer } from './components/Footer';
-import { LinkModal } from './components/LinkModal';
 
 const DEFAULT_FIGMA_URL = 'https://www.figma.com/proto/8xurgCtCj8ft46yGnAIMkU/QuickAttend?node-id=3-365&p=f&t=SxWYwvveouxwpJ6b-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A365&show-proto-sidebar=1';
 const DEFAULT_BEHANCE_URL = 'https://www.behance.net/gallery/259027739/QuickAttend-Dim-danh-mt-chm';
 const DEFAULT_WIKI_URL = 'https://github.com/QuickAttend-Team/QuickAttend/wiki';
 
 function App() {
-  const [figmaUrl, setFigmaUrl] = useState<string>(() => {
+  const [figmaUrl] = useState<string>(() => {
     const saved = localStorage.getItem('quickattend_figma_url');
     if (!saved || saved.includes('QuickAttend-App-Prototype')) return DEFAULT_FIGMA_URL;
     return saved;
   });
 
-  const [behanceUrl, setBehanceUrl] = useState<string>(() => {
+  const [behanceUrl] = useState<string>(() => {
     const saved = localStorage.getItem('quickattend_behance_url');
     if (!saved || saved.includes('QuickAttend-Smart-Attendance-System') || saved.includes('portfolio/editor')) return DEFAULT_BEHANCE_URL;
     return saved;
   });
 
-  const [wikiUrl, setWikiUrl] = useState<string>(() => {
+  const [wikiUrl] = useState<string>(() => {
     const saved = localStorage.getItem('quickattend_wiki_url');
     return saved || DEFAULT_WIKI_URL;
   });
-
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     localStorage.setItem('quickattend_figma_url', figmaUrl);
@@ -47,17 +44,10 @@ function App() {
     localStorage.setItem('quickattend_wiki_url', wikiUrl);
   }, [wikiUrl]);
 
-  const handleSaveLinks = (newFigma: string, newBehance: string, newWiki?: string) => {
-    if (newFigma) setFigmaUrl(newFigma);
-    if (newBehance) setBehanceUrl(newBehance);
-    if (newWiki) setWikiUrl(newWiki);
-  };
-
   return (
     <div className="landing-root__container_01" data-component="QuickAttendApp">
       {/* Top Sticky Navigation Bar */}
       <Navbar
-        onOpenLinkModal={() => setIsModalOpen(true)}
         figmaUrl={figmaUrl}
         behanceUrl={behanceUrl}
         wikiUrl={wikiUrl}
@@ -88,16 +78,6 @@ function App() {
 
       {/* Global Footer with CO3043 Team Information */}
       <Footer wikiUrl={wikiUrl} />
-
-      {/* Dynamic Link Update Modal for 23h15 Handover */}
-      <LinkModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        figmaUrl={figmaUrl}
-        behanceUrl={behanceUrl}
-        wikiUrl={wikiUrl}
-        onSave={handleSaveLinks}
-      />
     </div>
   );
 }
