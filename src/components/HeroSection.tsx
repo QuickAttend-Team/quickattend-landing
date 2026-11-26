@@ -97,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <span className="hero__kpi_label_01">Điểm danh hộ gian lận</span>
           </div>
           <div className="hero__kpi_item_01">
-            <span className="hero__kpi_value_01">120K+</span>
+            <span className="hero__kpi_value_01">12K+</span>
             <span className="hero__kpi_label_01">Lượt quét mỗi ngày</span>
           </div>
         </div>

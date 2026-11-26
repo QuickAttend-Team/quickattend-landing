@@ -145,7 +145,7 @@ export const UserStoriesSection: React.FC = () => {
               </li>
               <li className="stories__feature_item_01">
                 <Check size={16} className="stories__feature_check_01" />
-                <span>Báo cáo trực quan tức thì: Xuất danh sách vắng, trễ chuẩn Bộ Giáo Dục</span>
+                <span>Báo cáo trực quan tức thì: Xuất danh sách vắng, trễ theo chuẩn</span>
               </li>
             </ul>
           </div>

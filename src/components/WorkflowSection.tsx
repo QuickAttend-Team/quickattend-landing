@@ -35,7 +35,7 @@ export const WorkflowSection: React.FC = () => {
         <div className="workflow__header_01">
           <h2 className="workflow__title_01">Quy trình 3 bước siêu tốc trong giờ học</h2>
           <p className="workflow__subtitle_01">
-            Không cần gọi tên từng người, không ùn tắc máy quét vân tay tại cửa lớp.
+            Không cần gọi tên từng người, không mất thời gian cho tiết học.
           </p>
         </div>
 
